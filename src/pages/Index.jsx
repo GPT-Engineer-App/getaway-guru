@@ -1,9 +1,17 @@
 import React from "react";
-import { Box, Heading, Text, Image, Stack, Container, SimpleGrid, Button, Icon } from "@chakra-ui/react";
+import { Box, Heading, Text, Image, Stack, Container, SimpleGrid, Button, Icon, AspectRatio } from "@chakra-ui/react";
 import { FaPlane, FaHotel, FaUmbrellaBeach, FaPhone } from "react-icons/fa";
 
 const Index = () => {
   const packages = [
+    {
+      title: "Enchanting Umrah",
+      description: "Experience a spiritual journey to the holy cities of Mecca and Medina.",
+      duration: "10 days / 9 nights",
+      price: "$3,499",
+      video: "https://www.youtube.com/embed/VIDEO_ID_HERE",
+      included: ["Round-trip airfare", "5-star hotel accommodations", "Daily breakfast and dinner", "Guided tours of holy sites", "Visa assistance"],
+    },
     {
       title: "Tropical Paradise",
       description: "Enjoy a luxurious getaway on a pristine tropical island.",
@@ -50,10 +58,17 @@ const Index = () => {
     <Box>
       <Box bg="blue.500" color="white" py={8}>
         <Container maxW="container.lg">
-          <Heading as="h1" size="2xl" mb={4}>
-            Dream Vacations
-          </Heading>
-          <Text fontSize="xl">Discover amazing vacation packages tailored just for you!</Text>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} alignItems="center">
+            <Box>
+              <Heading as="h1" size="2xl" mb={4}>
+                Dream Vacations
+              </Heading>
+              <Text fontSize="xl">Discover amazing vacation packages tailored just for you!</Text>
+            </Box>
+            <AspectRatio ratio={16 / 9}>
+              <iframe src={packages[0].video} title="Umrah Package Video" allowFullScreen />
+            </AspectRatio>
+          </SimpleGrid>
         </Container>
       </Box>
 
