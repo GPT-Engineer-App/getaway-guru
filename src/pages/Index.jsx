@@ -7,17 +7,26 @@ const Index = () => {
     {
       title: "Tropical Paradise",
       description: "Enjoy a luxurious getaway on a pristine tropical island.",
+      duration: "7 days / 6 nights",
+      price: "$2,499",
       image: "https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGlzbGFuZCUyMHZhY2F0aW9ufGVufDB8fHx8MTcxMTgyMDUzN3ww&ixlib=rb-4.0.3&q=80&w=1080",
+      included: ["Round-trip airfare", "Beachfront resort accommodations", "All meals and drinks", "Daily activities and entertainment", "Airport transfers"],
     },
     {
       title: "Mountain Adventure",
       description: "Experience the thrill of hiking and exploring beautiful mountain ranges.",
+      duration: "5 days / 4 nights",
+      price: "$1,299",
       image: "https://images.unsplash.com/photo-1478399895294-ba93fb7ff943?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGhpa2luZyUyMHZhY2F0aW9ufGVufDB8fHx8MTcxMTgyMDUzOHww&ixlib=rb-4.0.3&q=80&w=1080",
+      included: ["Round-trip airfare", "Mountain lodge accommodations", "Guided hikes and nature walks", "Equipment rentals", "Daily breakfast"],
     },
     {
       title: "City Explorer",
       description: "Discover the vibrant culture and attractions of world-famous cities.",
+      duration: "4 days / 3 nights",
+      price: "$999",
       image: "https://images.unsplash.com/26/city-scape.jpg?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxjaXR5JTIwc2t5bGluZSUyMHZhY2F0aW9ufGVufDB8fHx8MTcxMTgyMDUzOHww&ixlib=rb-4.0.3&q=80&w=1080",
+      included: ["Round-trip airfare", "Centrally located hotel", "Hop-on hop-off bus tour", "Admission to top attractions", "Daily breakfast"],
     },
   ];
 
@@ -37,12 +46,25 @@ const Index = () => {
           {packages.map((pkg, index) => (
             <Box key={index} bg="white" borderRadius="lg" overflow="hidden" boxShadow="md">
               <Image src={pkg.image} alt={pkg.title} />
-              <Box p={6}>
+              <Box p={6} h="100%">
                 <Heading as="h3" size="lg" mb={2}>
                   {pkg.title}
                 </Heading>
-                <Text>{pkg.description}</Text>
-                <Button colorScheme="blue" size="lg" mt={4}>
+                <Text mb={2}>{pkg.description}</Text>
+                <Text fontWeight="bold" mb={2}>
+                  {pkg.duration} | {pkg.price}
+                </Text>
+                <Box mb={4}>
+                  <Text fontWeight="bold" mb={2}>
+                    What's Included:
+                  </Text>
+                  <ul>
+                    {pkg.included.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                </Box>
+                <Button colorScheme="blue" size="lg">
                   Book Now
                 </Button>
               </Box>
