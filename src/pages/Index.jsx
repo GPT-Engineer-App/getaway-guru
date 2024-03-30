@@ -28,6 +28,22 @@ const Index = () => {
       image: "https://images.unsplash.com/26/city-scape.jpg?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxjaXR5JTIwc2t5bGluZSUyMHZhY2F0aW9ufGVufDB8fHx8MTcxMTgyMDUzOHww&ixlib=rb-4.0.3&q=80&w=1080",
       included: ["Round-trip airfare", "Centrally located hotel", "Hop-on hop-off bus tour", "Admission to top attractions", "Daily breakfast"],
     },
+    {
+      title: "Enchanting Spain",
+      description: "Fall in love with the passionate culture and stunning architecture of Spain.",
+      duration: "8 days / 7 nights",
+      price: "$2,199",
+      image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxzcGFpbiUyMHRyYXZlbHxlbnwwfHx8fDE2ODAxNzc1NTZ8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      included: ["Round-trip airfare", "4-star hotel accommodations", "Daily breakfast", "Guided city tours", "Flamenco show", "Cooking class"],
+    },
+    {
+      title: "Timeless Turkey",
+      description: "Uncover the mysteries of Turkey's ancient ruins and natural wonders.",
+      duration: "11 days / 10 nights",
+      price: "$2,899",
+      image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHx0dXJrZXklMjB0cmF2ZWx8ZW58MHx8fHwxNjgwMTc3NjA2fDA&ixlib=rb-4.0.3&q=80&w=1080",
+      included: ["Round-trip airfare", "Boutique hotel accommodations", "Daily breakfast and dinner", "Guided tours of Istanbul, Cappadocia, and Ephesus", "Hot air balloon ride"],
+    },
   ];
 
   return (
