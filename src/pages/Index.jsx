@@ -7,10 +7,10 @@ const Index = () => {
     {
       title: "Enchanting Umrah",
       description: "Experience a spiritual journey to the holy cities of Mecca and Medina.",
-      duration: "10 days / 9 nights",
-      price: "$3,499",
-      video: "https://www.youtube.com/embed/VIDEO_ID_HERE",
-      included: ["Round-trip airfare", "5-star hotel accommodations", "Daily breakfast and dinner", "Guided tours of holy sites", "Visa assistance"],
+      duration: "11 days / 10 nights",
+      price: "$3,999",
+      video: "https://www.youtube.com/embed/NEW_VIDEO_ID_HERE",
+      included: ["Round-trip airfare", "5-star hotel accommodations in Mecca (5 nights) and Medina (5 nights)", "Daily breakfast and dinner", "Guided tours of holy sites", "Visa assistance", "Haramain Bullet Train between Mecca and Medina"],
     },
     {
       title: "Tropical Paradise",
