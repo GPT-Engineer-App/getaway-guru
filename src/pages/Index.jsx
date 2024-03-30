@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, Text, Image, Stack, Container, SimpleGrid, Button, Icon, AspectRatio } from "@chakra-ui/react";
+import { Box, Heading, Text, Image, Stack, Container, SimpleGrid, Button, Icon } from "@chakra-ui/react";
 import { FaPlane, FaHotel, FaUmbrellaBeach, FaPhone } from "react-icons/fa";
 
 const Index = () => {
@@ -54,6 +54,12 @@ const Index = () => {
     },
   ];
 
+  const umrahImages = [
+    "https://images.unsplash.com/photo-1590088263010-d7b0c4eaec6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxtZWNjYXxlbnwwfHx8fDE2ODAxNzgxMjZ8MA&ixlib=rb-4.0.3&q=80&w=1080",
+    "https://images.unsplash.com/photo-1591604021695-0c69b7c05981?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwyfHxtZWNjYXxlbnwwfHx8fDE2ODAxNzgxMjZ8MA&ixlib=rb-4.0.3&q=80&w=1080",
+    "https://images.unsplash.com/photo-1548256868-f7fa6e837d05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwzfHxtZWNjYXxlbnwwfHx8fDE2ODAxNzgxMjZ8MA&ixlib=rb-4.0.3&q=80&w=1080",
+  ];
+
   return (
     <Box>
       <Box bg="blue.500" color="white" py={8}>
@@ -65,9 +71,13 @@ const Index = () => {
               </Heading>
               <Text fontSize="xl">Discover amazing vacation packages tailored just for you!</Text>
             </Box>
-            <AspectRatio ratio={16 / 9}>
-              <iframe src={packages[0].video} title="Umrah Package Video" allowFullScreen />
-            </AspectRatio>
+            <SimpleGrid columns={{ base: 1, md: 1 }} spacing={4}>
+              {umrahImages.map((image, index) => (
+                <Box key={index} borderRadius="lg" overflow="hidden" boxShadow="md">
+                  <Image src={image} alt={`Umrah Image ${index + 1}`} />
+                </Box>
+              ))}
+            </SimpleGrid>
           </SimpleGrid>
         </Container>
       </Box>
